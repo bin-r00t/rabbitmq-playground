@@ -1,0 +1,18 @@
+{
+  "name": "rabbitmq",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node server.js",
+    "client": "node client.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "dependencies": {
+    "amqplib": "^0.10.5"
+  }
+}
