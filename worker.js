@@ -23,12 +23,13 @@ amqp.connect("amqp://localhost", function (error0, connection) {
         console.log(" [x] Received %s", msg.content.toString());
         setTimeout(function () {
           console.log(" [x] Done");
+          channel.ack(msg); // <=== it is important to acknowledge the message
         }, secs * 1000);
       },
       {
         // automatic acknowledgment mode,
         // see /docs/confirms for details
-        noAck: true,
+        noAck: false, // activate manual acknowledgment by setting 'noAck' to false
       }
     );
   });
